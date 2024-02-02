@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  php-fpm:
+    container_name: php-fpm
+    build:
+      context: ./../
+      dockerfile: ./docker/php-fpm/Dockerfile
+      args:
+        - PUID=${PUID}
+        - PGID=${PGID}
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker"
+    volumes:
+      - /var/www/vendor/
+      - ./../:/var/www/
+
+  nginx:
+    container_name: nginx
+    build:
+      context: ./nginx
+    ports:
+      - ${NGINX_HOST_HTTP_PORT}:80
+    volumes:
+        - ..:/var/www:rw
+    depends_on:
+        - php-fpm
+
+  database:
+      image: 'mysql:latest'
+      environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: nonrootuser
+        MYSQL_PASSWORD: nonrootuser
+        MYSQL_DATABASE: tournaments
+      ports:
+      # To allow the host machine to access the ports below, modify the lines below.
+      # For example, to allow the host to connect to port 3306 on the container, you would change
+      # "3306" to "3306:3306". Where the first port is exposed to the host and the second is the container port.
+      # See https://docs.docker.com/compose/compose-file/compose-file-v3/#ports for more information.
+      - '3306'
+
+

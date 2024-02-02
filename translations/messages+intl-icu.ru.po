@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+
+msgid "Bracket"
+msgstr "Таблица"
+
+msgid "Bracket for tournament"
+msgstr "Таблица турнира"
+
+msgid "Round"
+msgstr "Раунд"
+
+msgid "Create new tournament"
+msgstr "Создать турнир"
+
+msgid "Back to list"
+msgstr "Назад к списку"
+
+msgid "Tournaments list"
+msgstr "Список турниров"
+
+msgid "Create new"
+msgstr "Создать"
+
+msgid "Name"
+msgstr "Название"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "No tournaments registered"
+msgstr "Нет созданных турниров"
+
+msgid "Are you sure you want to delete this item?"
+msgstr "Вы уверены что хотите удалить?"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Create new team"
+msgstr "Создать команду"
+
+msgid "Teams list"
+msgstr "Список команд"
+
+msgid "No teams registered"
+msgstr "Нет созданных команд"
+
+msgid "Create new team"
+msgstr "Создать команду"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Tournaments"
+msgstr "Турниры"
+
+msgid "Teams"
+msgstr "Команды"
+
+msgid "Tournament name"
+msgstr "Название турнира"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Team name"
+msgstr "Название команды"
+
+msgid "Name..."
+msgstr "Название..."
+

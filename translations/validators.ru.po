@@ -1,0 +1,458 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+
+msgid "This value should be false."
+msgstr "Значение должно быть ложным."
+
+msgid "This value should be true."
+msgstr "Значение должно быть истинным."
+
+msgid "This value should be of type {{ type }}."
+msgstr "Тип значения должен быть {{ type }}."
+
+msgid "This value should be blank."
+msgstr "Значение должно быть пустым."
+
+msgid "The value you selected is not a valid choice."
+msgstr "Выбранное Вами значение недопустимо."
+
+msgid "You must select at least {{ limit }} choice."
+msgid_plural "You must select at least {{ limit }} choices."
+msgstr[0] "Вы должны выбрать хотя бы {{ limit }} вариант."
+msgstr[1] "Вы должны выбрать хотя бы {{ limit }} варианта."
+msgstr[2] "Вы должны выбрать хотя бы {{ limit }} вариантов."
+
+msgid "You must select at most {{ limit }} choice."
+msgid_plural "You must select at most {{ limit }} choices."
+msgstr[0] "Вы должны выбрать не более чем {{ limit }} вариант."
+msgstr[1] "Вы должны выбрать не более чем {{ limit }} варианта."
+msgstr[2] "Вы должны выбрать не более чем {{ limit }} вариантов."
+
+msgid "One or more of the given values is invalid."
+msgstr "Одно или несколько заданных значений недопустимо."
+
+msgid "This field was not expected."
+msgstr "Это поле не ожидалось."
+
+msgid "This field is missing."
+msgstr "Это поле отсутствует."
+
+msgid "This value is not a valid date."
+msgstr "Значение не является правильной датой."
+
+msgid "This value is not a valid datetime."
+msgstr "Значение даты и времени недопустимо."
+
+msgid "This value is not a valid email address."
+msgstr "Значение адреса электронной почты недопустимо."
+
+msgid "The file could not be found."
+msgstr "Файл не может быть найден."
+
+msgid "The file is not readable."
+msgstr "Файл не может быть прочитан."
+
+msgid "The file is too large ({{ size }} {{ suffix }}). Allowed maximum size is {{ limit }} {{ suffix }}."
+msgstr "Файл слишком большой ({{ size }} {{ suffix }}). Максимально допустимый размер {{ limit }} {{ suffix }}."
+
+msgid "The mime type of the file is invalid ({{ type }}). Allowed mime types are {{ types }}."
+msgstr "MIME-тип файла недопустим ({{ type }}). Допустимы MIME-типы файлов {{ types }}."
+
+msgid "This value should be {{ limit }} or less."
+msgstr "Значение должно быть {{ limit }} или меньше."
+
+msgid "This value is too long. It should have {{ limit }} character or less."
+msgid_plural "This value is too long. It should have {{ limit }} characters or less."
+msgstr[0] "Значение слишком длинное. Должно быть равно {{ limit }} символу или меньше."
+msgstr[1] "Значение слишком длинное. Должно быть равно {{ limit }} символам или меньше."
+msgstr[2] "Значение слишком длинное. Должно быть равно {{ limit }} символам или меньше."
+
+msgid "This value should be {{ limit }} or more."
+msgstr "Значение должно быть {{ limit }} или больше."
+
+msgid "This value is too short. It should have {{ limit }} character or more."
+msgid_plural "This value is too short. It should have {{ limit }} characters or more."
+msgstr[0] "Значение слишком короткое. Должно быть равно {{ limit }} символу или больше."
+msgstr[1] "Значение слишком короткое. Должно быть равно {{ limit }} символам или больше."
+msgstr[2] "Значение слишком короткое. Должно быть равно {{ limit }} символам или больше."
+
+msgid "This value should not be blank."
+msgstr "Значение не должно быть пустым."
+
+msgid "This value should not be null."
+msgstr "Значение не должно быть null."
+
+msgid "This value should be null."
+msgstr "Значение должно быть null."
+
+msgid "This value is not valid."
+msgstr "Значение недопустимо."
+
+msgid "This value is not a valid time."
+msgstr "Значение времени недопустимо."
+
+msgid "This value is not a valid URL."
+msgstr "Значение не является допустимым URL."
+
+msgid "The two values should be equal."
+msgstr "Оба значения должны быть одинаковыми."
+
+msgid "The file is too large. Allowed maximum size is {{ limit }} {{ suffix }}."
+msgstr "Файл слишком большой. Максимально допустимый размер {{ limit }} {{ suffix }}."
+
+msgid "The file is too large."
+msgstr "Файл слишком большой."
+
+msgid "The file could not be uploaded."
+msgstr "Файл не может быть загружен."
+
+msgid "This value should be a valid number."
+msgstr "Значение должно быть числом."
+
+msgid "This file is not a valid image."
+msgstr "Файл не является допустимым форматом изображения."
+
+msgid "This is not a valid IP address."
+msgstr "Это значение не является действительным IP-адресом."
+
+msgid "This value is not a valid language."
+msgstr "Значение не является допустимым языком."
+
+msgid "This value is not a valid locale."
+msgstr "Значение не является допустимой локалью."
+
+msgid "This value is not a valid country."
+msgstr "Значение не является допустимой страной."
+
+msgid "This value is already used."
+msgstr "Это значение уже используется."
+
+msgid "The size of the image could not be detected."
+msgstr "Не удалось определить размер изображения."
+
+msgid "The image width is too big ({{ width }}px). Allowed maximum width is {{ max_width }}px."
+msgstr "Ширина изображения слишком велика ({{ width }}px). Максимально допустимая ширина {{ max_width }}px."
+
+msgid "The image width is too small ({{ width }}px). Minimum width expected is {{ min_width }}px."
+msgstr "Ширина изображения слишком мала ({{ width }}px). Минимально допустимая ширина {{ min_width }}px."
+
+msgid "The image height is too big ({{ height }}px). Allowed maximum height is {{ max_height }}px."
+msgstr "Высота изображения слишком велика ({{ height }}px). Максимально допустимая высота {{ max_height }}px."
+
+msgid "The image height is too small ({{ height }}px). Minimum height expected is {{ min_height }}px."
+msgstr "Высота изображения слишком мала ({{ height }}px). Минимально допустимая высота {{ min_height }}px."
+
+msgid "This value should be the user's current password."
+msgstr "Значение должно быть текущим паролем пользователя."
+
+msgid "This value should have exactly {{ limit }} character."
+msgid_plural "This value should have exactly {{ limit }} characters."
+msgstr[0] "Значение должно быть равно {{ limit }} символу."
+msgstr[1] "Значение должно быть равно {{ limit }} символам."
+msgstr[2] "Значение должно быть равно {{ limit }} символам."
+
+msgid "The file was only partially uploaded."
+msgstr "Файл был загружен только частично."
+
+msgid "No file was uploaded."
+msgstr "Файл не был загружен."
+
+msgid "No temporary folder was configured in php.ini."
+msgstr "В php.ini не была настроена временная папка, или настроенная папка не существует."
+
+msgid "Cannot write temporary file to disk."
+msgstr "Невозможно записать временный файл на диск."
+
+msgid "A PHP extension caused the upload to fail."
+msgstr "Расширение PHP вызвало ошибку при загрузке."
+
+msgid "This collection should contain {{ limit }} element or more."
+msgid_plural "This collection should contain {{ limit }} elements or more."
+msgstr[0] "Эта коллекция должна содержать {{ limit }} элемент или больше."
+msgstr[1] "Эта коллекция должна содержать {{ limit }} элемента или больше."
+msgstr[2] "Эта коллекция должна содержать {{ limit }} элементов или больше."
+
+msgid "This collection should contain {{ limit }} element or less."
+msgid_plural "This collection should contain {{ limit }} elements or less."
+msgstr[0] "Эта коллекция должна содержать {{ limit }} элемент или меньше."
+msgstr[1] "Эта коллекция должна содержать {{ limit }} элемента или меньше."
+msgstr[2] "Эта коллекция должна содержать {{ limit }} элементов или меньше."
+
+msgid "This collection should contain exactly {{ limit }} element."
+msgid_plural "This collection should contain exactly {{ limit }} elements."
+msgstr[0] "Эта коллекция должна содержать ровно {{ limit }} элемент."
+msgstr[1] "Эта коллекция должна содержать ровно {{ limit }} элемента."
+msgstr[2] "Эта коллекция должна содержать ровно {{ limit }} элементов."
+
+msgid "Invalid card number."
+msgstr "Неверный номер карты."
+
+msgid "Unsupported card type or invalid card number."
+msgstr "Неподдерживаемый тип или неверный номер карты."
+
+msgid "This is not a valid International Bank Account Number (IBAN)."
+msgstr "Это значение не является действительным Международным банковским счетом (IBAN)."
+
+msgid "This value is not a valid ISBN-10."
+msgstr "Значение имеет неверный формат ISBN-10."
+
+msgid "This value is not a valid ISBN-13."
+msgstr "Значение имеет неверный формат ISBN-13."
+
+msgid "This value is neither a valid ISBN-10 nor a valid ISBN-13."
+msgstr "Значение не соответствует форматам ISBN-10 и ISBN-13."
+
+msgid "This value is not a valid ISSN."
+msgstr "Значение не соответствует формату ISSN."
+
+msgid "This value is not a valid currency."
+msgstr "Некорректный формат валюты."
+
+msgid "This value should be equal to {{ compared_value }}."
+msgstr "Значение должно быть равно {{ compared_value }}."
+
+msgid "This value should be greater than {{ compared_value }}."
+msgstr "Значение должно быть больше чем {{ compared_value }}."
+
+msgid "This value should be greater than or equal to {{ compared_value }}."
+msgstr "Значение должно быть больше или равно {{ compared_value }}."
+
+msgid "This value should be identical to {{ compared_value_type }} {{ compared_value }}."
+msgstr "Значение должно быть идентичным {{ compared_value_type }} {{ compared_value }}."
+
+msgid "This value should be less than {{ compared_value }}."
+msgstr "Значение должно быть меньше чем {{ compared_value }}."
+
+msgid "This value should be less than or equal to {{ compared_value }}."
+msgstr "Значение должно быть меньше или равно {{ compared_value }}."
+
+msgid "This value should not be equal to {{ compared_value }}."
+msgstr "Значение не должно быть равно {{ compared_value }}."
+
+msgid "This value should not be identical to {{ compared_value_type }} {{ compared_value }}."
+msgstr "Значение не должно быть идентичным {{ compared_value_type }} {{ compared_value }}."
+
+msgid "The image ratio is too big ({{ ratio }}). Allowed maximum ratio is {{ max_ratio }}."
+msgstr "Соотношение сторон изображения слишком велико ({{ ratio }}). Максимальное соотношение сторон {{ max_ratio }}."
+
+msgid "The image ratio is too small ({{ ratio }}). Minimum ratio expected is {{ min_ratio }}."
+msgstr "Соотношение сторон изображения слишком мало ({{ ratio }}). Минимальное соотношение сторон {{ min_ratio }}."
+
+msgid "The image is square ({{ width }}x{{ height }}px). Square images are not allowed."
+msgstr "Изображение квадратное ({{ width }}x{{ height }}px). Квадратные изображения не разрешены."
+
+msgid "The image is landscape oriented ({{ width }}x{{ height }}px). Landscape oriented images are not allowed."
+msgstr "Изображение в альбомной ориентации ({{ width }}x{{ height }}px). Изображения в альбомной ориентации не разрешены."
+
+msgid "The image is portrait oriented ({{ width }}x{{ height }}px). Portrait oriented images are not allowed."
+msgstr "Изображение в портретной ориентации ({{ width }}x{{ height }}px). Изображения в портретной ориентации не разрешены."
+
+msgid "An empty file is not allowed."
+msgstr "Пустые файлы не разрешены."
+
+msgid "The host could not be resolved."
+msgstr "Имя хоста не может быть разрешено."
+
+msgid "This value does not match the expected {{ charset }} charset."
+msgstr "Значение не совпадает с ожидаемой {{ charset }} кодировкой."
+
+msgid "This is not a valid Business Identifier Code (BIC)."
+msgstr "Это значение не является действительным Бизнес-идентификатором (BIC)."
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "This is not a valid UUID."
+msgstr "Это значение не является действительным UUID."
+
+msgid "This value should be a multiple of {{ compared_value }}."
+msgstr "Значение должно быть кратно {{ compared_value }}."
+
+msgid "This Business Identifier Code (BIC) is not associated with IBAN {{ iban }}."
+msgstr "Данный BIC не связан с IBAN {{ iban }}."
+
+msgid "This value should be valid JSON."
+msgstr "Значение должно быть корректным JSON."
+
+msgid "This collection should contain only unique elements."
+msgstr "Эта коллекция должна содержать только уникальные элементы."
+
+msgid "This value should be positive."
+msgstr "Значение должно быть положительным."
+
+msgid "This value should be either positive or zero."
+msgstr "Значение должно быть положительным или равным нулю."
+
+msgid "This value should be negative."
+msgstr "Значение должно быть отрицательным."
+
+msgid "This value should be either negative or zero."
+msgstr "Значение должно быть отрицательным или равным нулю."
+
+msgid "This value is not a valid timezone."
+msgstr "Значение не является корректным часовым поясом."
+
+msgid "This password has been leaked in a data breach, it must not be used. Please use another password."
+msgstr "Данный пароль был скомпрометирован в результате утечки данных и не должен быть использован. Пожалуйста, используйте другой пароль."
+
+msgid "This value should be between {{ min }} and {{ max }}."
+msgstr "Значение должно быть между {{ min }} и {{ max }}."
+
+msgid "This value is not a valid hostname."
+msgstr "Значение не является корректным именем хоста."
+
+msgid "The number of elements in this collection should be a multiple of {{ compared_value }}."
+msgstr "Количество элементов в этой коллекции должно быть кратным {{ compared_value }}."
+
+msgid "This value should satisfy at least one of the following constraints:"
+msgstr "Значение должно удовлетворять как минимум одному из следующих ограничений:"
+
+msgid "Each element of this collection should satisfy its own set of constraints."
+msgstr "Каждый элемент этой коллекции должен удовлетворять своему собственному набору ограничений."
+
+msgid "This value is not a valid International Securities Identification Number (ISIN)."
+msgstr "Значение не является корректным международным идентификационным номером ценных бумаг (ISIN)."
+
+msgid "This value should be a valid expression."
+msgstr "Это значение должно быть корректным выражением."
+
+msgid "This value is not a valid CSS color."
+msgstr "Значение не является корректным CSS цветом."
+
+msgid "This value is not a valid CIDR notation."
+msgstr "Значение не соответствует нотации CIDR."
+
+msgid "The value of the netmask should be between {{ min }} and {{ max }}."
+msgstr "Значение маски подсети должно быть от {{ min }} до {{ max }}."
+
+msgid "The filename is too long. It should have {{ filename_max_length }} character or less."
+msgid_plural "The filename is too long. It should have {{ filename_max_length }} characters or less."
+msgstr[0] "Имя файла слишком длинное. Оно должно содержать {{ filename_max_length }} символ или меньше."
+msgstr[1] "Имя файла слишком длинное. Оно должно содержать {{ filename_max_length }} символа или меньше."
+msgstr[2] "Имя файла слишком длинное. Оно должно содержать {{ filename_max_length }} символов или меньше."
+
+msgid "The password strength is too low. Please use a stronger password."
+msgstr "Слишком низкая надёжность пароля. Пожалуйста, используйте более надёжный пароль."
+
+msgid "This value contains characters that are not allowed by the current restriction-level."
+msgstr "Значение содержит символы, запрещённые на текущем уровне ограничений."
+
+msgid "Using invisible characters is not allowed."
+msgstr "Использование невидимых символов запрещено."
+
+msgid "Mixing numbers from different scripts is not allowed."
+msgstr "Смешивание номеров из разных сценариев запрещено."
+
+msgid "Using hidden overlay characters is not allowed."
+msgstr "Использование невидимых символов наложения запрещено."
+
+msgid "The extension of the file is invalid ({{ extension }}). Allowed extensions are {{ extensions }}."
+msgstr "Недопустимое расширение файла ({{ extension }}). Разрешенные расширения: {{ extensions }}."
+
+msgid "The detected character encoding is invalid ({{ detected }}). Allowed encodings are {{ encodings }}."
+msgstr "Обнаруженная кодировка символов недопустима ({{ detected }}). Разрешенные кодировки: {{ encodings }}."
+
+msgid "This value is not a valid MAC address."
+msgstr "Это значение не является действительным MAC-адресом."
+
+msgid "This form should not contain extra fields."
+msgstr "Эта форма не должна содержать дополнительных полей."
+
+msgid "The uploaded file was too large. Please try to upload a smaller file."
+msgstr "Загруженный файл слишком большой. Пожалуйста, попробуйте загрузить файл меньшего размера."
+
+msgid "The CSRF token is invalid. Please try to resubmit the form."
+msgstr "CSRF значение недопустимо. Пожалуйста, попробуйте повторить отправку формы."
+
+msgid "This value is not a valid HTML5 color."
+msgstr "Значение не является допустимым HTML5 цветом."
+
+msgid "Please enter a valid birthdate."
+msgstr "Пожалуйста, введите действительную дату рождения."
+
+msgid "The selected choice is invalid."
+msgstr "Выбранный вариант недопустим."
+
+msgid "The collection is invalid."
+msgstr "Коллекция недопустима."
+
+msgid "Please select a valid color."
+msgstr "Пожалуйста, выберите допустимый цвет."
+
+msgid "Please select a valid country."
+msgstr "Пожалуйста, выберите действительную страну."
+
+msgid "Please select a valid currency."
+msgstr "Пожалуйста, выберите действительную валюту."
+
+msgid "Please choose a valid date interval."
+msgstr "Пожалуйста, выберите действительный период."
+
+msgid "Please enter a valid date and time."
+msgstr "Пожалуйста, введите действительные дату и время."
+
+msgid "Please enter a valid date."
+msgstr "Пожалуйста, введите действительную дату."
+
+msgid "Please select a valid file."
+msgstr "Пожалуйста, выберите допустимый файл."
+
+msgid "The hidden field is invalid."
+msgstr "Значение скрытого поля недопустимо."
+
+msgid "Please enter an integer."
+msgstr "Пожалуйста, введите целое число."
+
+msgid "Please select a valid language."
+msgstr "Пожалуйста, выберите допустимый язык."
+
+msgid "Please select a valid locale."
+msgstr "Пожалуйста, выберите допустимую локаль."
+
+msgid "Please enter a valid money amount."
+msgstr "Пожалуйста, введите допустимое количество денег."
+
+msgid "Please enter a number."
+msgstr "Пожалуйста, введите номер."
+
+msgid "The password is invalid."
+msgstr "Пароль недействителен."
+
+msgid "Please enter a percentage value."
+msgstr "Пожалуйста, введите процентное значение."
+
+msgid "The values do not match."
+msgstr "Значения не совпадают."
+
+msgid "Please enter a valid time."
+msgstr "Пожалуйста, введите действительное время."
+
+msgid "Please select a valid timezone."
+msgstr "Пожалуйста, выберите действительный часовой пояс."
+
+msgid "Please enter a valid URL."
+msgstr "Пожалуйста, введите действительный URL."
+
+msgid "Please enter a valid search term."
+msgstr "Пожалуйста, введите действительный поисковый запрос."
+
+msgid "Please provide a valid phone number."
+msgstr "Пожалуйста, введите действительный номер телефона."
+
+msgid "The checkbox has an invalid value."
+msgstr "Флажок имеет недопустимое значение."
+
+msgid "Please enter a valid email address."
+msgstr "Пожалуйста, введите допустимый email адрес."
+
+msgid "Please select a valid option."
+msgstr "Пожалуйста, выберите допустимый вариант."
+
+msgid "Please select a valid range."
+msgstr "Пожалуйста, выберите допустимый диапазон."
+
+msgid "Please enter a valid week."
+msgstr "Пожалуйста, введите действительную неделю."

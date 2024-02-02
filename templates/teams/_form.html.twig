@@ -1,0 +1,9 @@
+{{ form_start(form, {'attr':{class:'col-6'}}) }}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">{{ form_label(form.Name) }}</label>
+        {{ form_widget(form.Name, {'attr': {class: 'form-control', placeholder: 'Name...'}}) }}
+    </div>
+    <button type="submit" class="btn btn-sm btn-success">{{ button_label|default('Save'|trans) }}</button>
+{{ form_rest(form) }}
+{{ form_end(form, {render_rest: false}) }}
+

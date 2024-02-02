@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'Bracket'|trans}}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="col-8 d-flex flex-row justify-content-evenly align-items-center">
+            <h1>{{ 'Bracket for tournament'|trans }} - {{ tournamentName }}</h1>
+            <a class="btn btn-primary btn-sm" role="button" href="{{ path('app_tournaments_index') }}">{{ 'Back to list'|trans  }}</a>
+        </div>
+    <div class="row justify-content-around align-items-baseline">
+        {% for key ,data in dataObject %}
+            <div class="col-3 mb-3 me-1 card">
+                <div class="card-body">
+                <p class="card-title"> <b>{{ "Round"|trans }} {{ key+1 }} - {{ data.date|date("Y-m-d") }}</b></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for matches in data.matches %}
+                        <li class="list-group-item pe-0"><small>{{ matches[0] }} : {{ matches[1] }}</small></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock %}
