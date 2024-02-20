@@ -30,15 +30,14 @@ class TournamentsController extends AbstractController
     }
 
     #[Route('/new', name: 'app_tournaments_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager,TeamsRepository $teamsRepository): Response
+    public function new(Request $request,TeamsRepository $teamsRepository, TournamentsRepository $tournamentsRepository): Response
     {
         $tournament = new Tournaments();
-        $form = $this->createForm(TournamentsType::class, $tournament);
+        $form = $this->createForm(TournamentsType::class, $tournament, ['Teams' => $teamsRepository->findAll()]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->saveData($form,$tournament, $entityManager, $teamsRepository);
-
+            $tournamentsRepository->saveData($form->getExtraData(),$tournament, $teamsRepository);
 
             return $this->redirectToRoute('app_tournaments_index', [], Response::HTTP_SEE_OTHER);
         }
@@ -50,11 +49,11 @@ class TournamentsController extends AbstractController
     }
 
     #[Route('/{slug}', name: 'app_tournaments_bracket', methods: ['GET'])]
-    public function bracket( #[MapEntity(expr: 'repository.findOneBy({"Name":slug})')] Tournaments $tournaments, RoundRepository $roundRepository): Response
+    public function bracket( #[MapEntity(expr: 'repository.findOneBy({"slug":slug})')] Tournaments $tournaments, RoundRepository $roundRepository): Response
     {
         $dataObject = [];
-        $bracket=$tournaments->getBracket()->getId();
-        $rounds=$roundRepository->findBy(['bracket'=>$bracket]);
+        $bracket = $tournaments->getBracket()->getId();
+        $rounds = $roundRepository->findBy(['bracket'=>$bracket]);
         foreach ($rounds as $round) {
             $matches = [];
             foreach ($round->getMatches() as $match) {
@@ -89,31 +88,4 @@ class TournamentsController extends AbstractController
         return $this->redirectToRoute('app_tournaments_index', [], Response::HTTP_SEE_OTHER);
     }
 
-
-    private function saveData($form ,Tournaments $tournament, EntityManagerInterface $entityManager, TeamsRepository $teamsRepository): void
-    {
-
-        $bracketEnt = new Bracket();
-        $bracketEnt->setTournament($tournament);
-        foreach ($form->getExtraData()['brackets'] as $key => $rounds) {
-            $roundEnt = new Round();
-            foreach ($rounds['matches'] as $matches) {
-                $matchEnt = new Matches();
-                $matchEnt->addTeam($teamsRepository->find($matches['team_1']));
-                $matchEnt->addTeam($teamsRepository->find($matches['team_2']));
-
-                $entityManager->persist($matchEnt);
-                $roundEnt->addMatch($matchEnt);
-            }
-            $roundEnt->setDate(new \DateTime($rounds['date']));
-            $entityManager->persist($roundEnt);
-            $bracketEnt->addRound($roundEnt);
-            $entityManager->persist($bracketEnt);
-
-        }
-        $tournament->setBracket($bracketEnt);
-        $entityManager->persist($tournament);
-
-        $entityManager->flush();
-    }
 }

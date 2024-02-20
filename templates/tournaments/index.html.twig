@@ -23,7 +23,11 @@
                         <div class="col m-1 border-end border-primary text-center">{{ tournament.id }}</div>
                         <div class="col m-1 border-end border-primary text-center">{{ tournament.Name }}</div>
                         <div class="col m-1 text-center">
-                            {{ include('tournaments/_delete_form.html.twig') }}
+                            <div class="btn-group">
+                                {{ include('tournaments/_delete_form.html.twig') }}
+                                <a class="btn btn-primary btn-sm" role="button" href="{{ path('app_tournaments_bracket', {'slug': tournament.Name} ) }}">{{ 'View'|trans}}</a>
+                            </div>
+
                         </div>
                     </div>
                 {% endfor %}

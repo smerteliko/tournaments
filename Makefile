@@ -2,7 +2,7 @@
 # Variables
 ##################
 
-DOCKER_COMPOSE = docker compose -f ./docker/docker-compose.yml
+DOCKER_COMPOSE = docker compose -f ./docker-compose.yml
 DOCKER_COMPOSE_PHP_FPM_EXEC = ${DOCKER_COMPOSE} exec -u www-data php-fpm
 
 ##################
@@ -44,9 +44,15 @@ app_bash:
 	${DOCKER_COMPOSE} exec -u www-data php-fpm bash
 php: app_bash
 
+app_composer_install:
+	${DOCKER_COMPOSE} exec -u www-data php-fpm composer install
+
+app_composer_update:
+	${DOCKER_COMPOSE} exec -u www-data php-fpm composer update
+
 cache:
-	docker-compose -f ./docker/docker-compose.yml exec -u www-data php-fpm bin/console cache:clear
-	docker-compose -f ./docker/docker-compose.yml exec -u www-data php-fpm bin/console cache:clear --env=test
+	${DOCKER_COMPOSE} exec -u www-data php-fpm bin/console cache:clear
+	${DOCKER_COMPOSE} exec -u www-data php-fpm bin/console cache:clear --env=test
 
 ##################
 # Database
@@ -68,4 +74,8 @@ db_migration_down:
 
 
 db_drop:
-	docker-compose -f ./docker/docker-compose.yml exec -u www-data php-fpm bin/console doctrine:schema:drop --force
+	${DOCKER_COMPOSE} exec -u www-data php-fpm bin/console doctrine:schema:drop --force
+
+
+app_build: build up app_composer_install diff migrate
+

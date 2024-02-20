@@ -5,7 +5,9 @@ namespace App\Entity;
 use App\Repository\TournamentsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: TournamentsRepository::class)]
 class Tournaments
@@ -19,10 +21,14 @@ class Tournaments
     private ?string $Name = null;
 
     #[ORM\ManyToMany(targetEntity: Teams::class, inversedBy: 'tournaments')]
+    #[Assert\Count(['min'=>1])]
     private Collection $Teams;
 
     #[ORM\OneToOne(mappedBy: 'tournament', cascade: ['persist', 'remove'])]
     private ?Bracket $bracket = null;
+
+    #[ORM\Column(type: Types::ASCII_STRING)]
+    private $slug = null;
 
 
 
@@ -85,6 +91,18 @@ class Tournaments
         }
 
         $this->bracket = $bracket;
+
+        return $this;
+    }
+
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    public function setSlug($slug): static
+    {
+        $this->slug = $slug;
 
         return $this;
     }

@@ -1,4 +1,5 @@
 {{ form_start(form) }}
+{% if form.Teams is defined %}
     <div class="col-4 mb-3">
         <label for="exampleFormControlInput1" class="form-label">{{ form_label(form.Name) }}</label>
             {{ form_widget(form.Name, {'attr': {class: 'form-control', placeholder: 'Name...'}}) }}
@@ -24,7 +25,15 @@
     {% endfor %}
     </ul>
 </div>
+
     <button class="btn btn-sm btn-success">{{ button_label|default('Save'|trans) }}</button>
+
+{% else %}
+    <ul
+         class="text-danger">{{ 'Create teams before tournament'|trans }}
+    </ul>
+
+{% endif %}
 
 {{ form_end(form) }}
 

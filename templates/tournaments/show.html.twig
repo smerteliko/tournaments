@@ -15,8 +15,8 @@
                 <p class="card-title"> <b>{{ "Round"|trans }} {{ key+1 }} - {{ data.date|date("Y-m-d") }}</b></p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    {% for matches in data.matches %}
-                        <li class="list-group-item pe-0"><small>{{ matches[0] }} : {{ matches[1] }}</small></li>
+                    {% for match in data.matches %}
+                        <li class="list-group-item pe-0"><small>{#{{ match[0] }} : {{ match[1] }}#}</small></li>
                     {% endfor %}
                 </ul>
             </div>
