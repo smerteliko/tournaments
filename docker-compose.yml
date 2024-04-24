@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   php-fpm:
-    container_name: php-fpm
+    container_name: ${COMPOSE_PROJECT_NAME}_php-fpm
     build:
       context: docker
       dockerfile: ./php-fpm/Dockerfile
@@ -14,7 +14,7 @@ services:
       - tournaments
 
   nginx:
-    container_name: nginx
+    container_name: ${COMPOSE_PROJECT_NAME}_nginx
     build:
       context: docker/nginx
     ports:
@@ -30,14 +30,15 @@ services:
   database:
       image: 'mysql:latest'
       container_name: ${COMPOSE_PROJECT_NAME}_database
+      command: --max-allowed-packet=500M
       volumes:
         - "./docker/db/data:/var/lib/mysql"
         - "./docker/db/logs:/var/log/mysql"
         - "./docker/db:/etc/mysql/conf.d"
       environment:
-        MYSQL_ROOT_PASSWORD: root
-        MYSQL_USER: nonrootuser
-        MYSQL_PASSWORD: nonrootuser
+        MYSQL_ROOT_PASSWORD: rootpass
+        MYSQL_USER: nonroot
+        MYSQL_PASSWORD: nonroot
         MYSQL_DATABASE: tournaments
       ports:
       # To allow the host machine to access the ports below, modify the lines below.

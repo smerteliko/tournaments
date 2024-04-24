@@ -9,23 +9,20 @@ DOCKER_COMPOSE_PHP_FPM_EXEC = ${DOCKER_COMPOSE} exec -u www-data php-fpm
 # Docker compose
 ##################
 
-build:
+dc_build:
 	${DOCKER_COMPOSE} build
 
-start:
+dc_start:
 	${DOCKER_COMPOSE} start
 
-stop:
+dc_stop:
 	${DOCKER_COMPOSE} stop
 
-up:
+dc_up:
 	${DOCKER_COMPOSE} up -d --remove-orphans
 
-down:
-	${DOCKER_COMPOSE} down
-
-restart: stop start
-rebuild: down build up
+dc_down:
+	${DOCKER_COMPOSE} down -v --rmi=all --remove-orphans
 
 dc_ps:
 	${DOCKER_COMPOSE} ps
@@ -33,11 +30,8 @@ dc_ps:
 dc_logs:
 	${DOCKER_COMPOSE} logs -f
 
-dc_down:
-	${DOCKER_COMPOSE} down -v --rmi=all --remove-orphans
-
-dc_restart:
-	make dc_stop dc_start
+restart: dc_stop dc_start
+rebuild: dc_down dc_build dc_up
 
 
 app_bash:
@@ -60,11 +54,9 @@ cache:
 
 db_migrate:
 	${DOCKER_COMPOSE} exec -u www-data php-fpm bin/console doctrine:migrations:migrate --no-interaction
-migrate: db_migrate
 
 db_diff:
 	${DOCKER_COMPOSE} exec -u www-data php-fpm bin/console doctrine:migrations:diff --no-interaction
-diff: db_diff
 
 db_schema_validate:
 	${DOCKER_COMPOSE} exec -u www-data php-fpm bin/console doctrine:schema:validate
@@ -77,5 +69,7 @@ db_drop:
 	${DOCKER_COMPOSE} exec -u www-data php-fpm bin/console doctrine:schema:drop --force
 
 
-app_build: build up app_composer_install diff migrate
+app_build: dc_build dc_up app_composer_install diff migrate
+
+app_down: db_drop  dc_down
 
